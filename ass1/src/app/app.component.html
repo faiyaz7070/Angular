@@ -1,0 +1,15 @@
+
+
+<!-- this is question no 1 -->
+<h1>{{pageTitle}}</h1>
+<h2>{{a+b}}</h2>
+<h3>{{a+b+10}}</h3>
+<!-- this is second question -->
+<img [src]="imageUrl" [attr.disabled]="disable ? 'disabled' : null">
+<button (click)="toggleChange()">Submit</button>
+<!-- this is third question -->
+<button (click)="handleButtonClick()">Click Me</button>
+
+
+<p>{{ username }}</p>
+<p [style.color]="isError ? 'red' : 'green'">This is conditional styling</p>
