@@ -1,0 +1,19 @@
+<!-- src/app/products/products.component.html -->
+
+<div>
+    <h2>List of Products</h2>
+    
+    <ul>
+      <!-- Using *ngFor directive to iterate over products array -->
+      <li *ngFor="let product of products">
+        <!-- Displaying product details -->
+        <span>{{ product.name }} - ${{ product.price }}</span>
+        <!-- Using *ngIf directive to conditionally display availability message -->
+        <span *ngIf="product.available; else notAvailable" style="color: green;">Available</span>
+        <ng-template #notAvailable>
+          <span style="color: red;">Not Available</span>
+        </ng-template>
+      </li>
+    </ul>
+  </div>
+  
