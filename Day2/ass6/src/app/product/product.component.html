@@ -1,0 +1,13 @@
+<!-- product.component.html -->
+<h2>Product List</h2>
+<label>Price Threshold:</label>
+<input type="number" [(ngModel)]="fontSizeThreshold">
+<ul>
+  <li *ngFor="let product of products" [ngStyle]="{'background-color': product.available ? 'green' : 'red', 'font-size': isPriceHigh(product.price) ? '1.5em' : '1em'}">
+    <span>{{ product.name }}</span> - ${{ product.price }}
+    <span *ngIf="product.available; else notAvailable" style="color: green;">Available</span>
+    <ng-template #notAvailable>
+      <span style="color: red;">Not Available</span>
+    </ng-template>
+  </li>
+</ul>
