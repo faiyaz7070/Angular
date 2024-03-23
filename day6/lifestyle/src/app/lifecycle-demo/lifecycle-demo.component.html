@@ -1,0 +1,11 @@
+<div *ngIf="error; else dataContent">
+    <p>Error occurred: {{ error }}</p>
+  </div>
+  <ng-template #dataContent>
+    <div *ngIf="data">
+      <!-- Display fetched data -->
+      <h2>Data Details</h2>
+      <p>Data: {{ data }}</p>
+    </div>
+  </ng-template>
+  
