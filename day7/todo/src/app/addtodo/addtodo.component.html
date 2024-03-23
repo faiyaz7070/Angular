@@ -1,0 +1,13 @@
+<p>addtodo works!</p>
+<form (ngSubmit)="onSubmit()">
+    
+    <div>
+      <label for="title">Title:</label><br>
+      <input type="text" id="title" name="title" [(ngModel)]="name" required><br><br>
+    </div>
+    <div>
+      <label for="desc">Description:</label><br>
+      <input type="text" id="desc" name="desc" [(ngModel)]="desc" required><br><br>
+    </div>
+    <button type="submit">Submit</button>
+  </form>
