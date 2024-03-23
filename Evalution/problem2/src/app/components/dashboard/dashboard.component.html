@@ -1,0 +1,20 @@
+<div>
+    <input type="text" [(ngModel)]="search" placeholder="Search product">
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th (click)="toggle()">Product Name</th>
+        <th (click)="toggle()">Price</th>
+        <th>Category</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products | filter: search | sort: sort: sortOrder">
+        <td><a [routerLink]="['/product', product.id]">{{ product.productName }}</a></td>
+        <td>{{ product.price }}</td>
+        <td>{{ product.category }}</td>
+      </tr>
+    </tbody>
+  </table>
+  

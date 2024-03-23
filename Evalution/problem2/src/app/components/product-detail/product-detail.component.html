@@ -1,0 +1,11 @@
+<div class="product-detail-container" *ngIf="product">
+    <h2>Product Detail</h2>
+    <p><strong>ID:</strong> {{ product.id }}</p>
+    <p><strong>Name:</strong> {{ product.productName }}</p>
+    <p><strong>Price:</strong> {{ product.price }}</p>
+    <p><strong>Category:</strong> {{ product.category }}</p>
+  </div>
+  <div class="product-not-found" *ngIf="!product">
+    <p>Product not found.</p>
+  </div>
+  
